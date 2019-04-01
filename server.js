@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 5000;
+// this port has to match the proxy request inside of package.json for client
+const port = process.env.PORT || 5858;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

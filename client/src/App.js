@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
 
 import HomeDrawer from './HomeDrawer';
 
@@ -51,9 +52,7 @@ class App extends Component {
 
 
         </header>
-
-        <HomeDrawer state={this.state.open} onMaskClick={this.onClick}/>
-
+        <HomeDrawer/>
         <p>{this.state.response}</p>
         <form onSubmit={this.handleSubmit}>
           <p>
