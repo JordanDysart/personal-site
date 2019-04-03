@@ -1,7 +1,7 @@
 import Drawer from 'rc-drawer';
 import React from 'react';
 
-import { Menu, Icon, Button } from 'antd';
+import { Menu, Icon } from 'antd';
 
 import 'antd/lib/style';
 import 'antd/lib/menu/style';
@@ -10,6 +10,8 @@ import 'antd/lib/button/style';
 import 'rc-drawer/assets/index.css';
 
 
+
+// TODO load information from server/database
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 class HomeDrawer extends React.Component {
@@ -67,14 +69,11 @@ class HomeDrawer extends React.Component {
         </Drawer>
         <div
           style={{
-            width: '100%', height: 667, background: '#fff000',
-            color: '#fff', textAlign: 'center', lineHeight: '667px',
+            display: 'none',
+            width: '100%'
           }}
         >
-          内容区块
-          <Button onClick={this.onClick}>
-            {this.state.level ? '切换成空 level' : '切换成标题和内容跟随动'}
-          </Button>
+
         </div>
       </div>
     );
